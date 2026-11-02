@@ -44,8 +44,7 @@ This analysis is intended as an initial workforce screening exercise, not a comp
 
 ## Repository Structure
 
-```text
-canadian-workforce-analysis-dashboard/
+```canadian-workforce-analysis-dashboard/
 │
 ├── app.py
 ├── assets/
@@ -54,9 +53,11 @@ canadian-workforce-analysis-dashboard/
 │   ├── essential_services.csv
 │   ├── data_gender_employment.csv
 │   └── data_engineering.csv
-├── notebooks/
-│   └── canadian_workforce_analysis.ipynb
-├── screenshots/
+├── canadian_workforce_analysis.ipynb
+├── engineering-heatmap.png
+├── essential_services.png
+├── ev_factory_eligibility_analysis.png
+├── gender_employment.png
 ├── requirements.txt
 └── README.md
 ```
