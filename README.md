@@ -1,78 +1,119 @@
 # Canadian Workforce Analysis Dashboard
 
-An interactive dashboard exploring Canadian workforce patterns across provinces and territories. The project uses Python, Pandas, Dash, and Plotly to turn tabular workforce data into interactive comparisons.
+An interactive data analytics project exploring workforce distribution, gender employment patterns, and engineering talent across Canada's provinces and territories.
 
-## Project overview
+Built using Python, Pandas, Dash, and Plotly, this dashboard transforms workforce datasets into interactive visualizations to support geographic comparisons and workforce exploration.
 
-This project contains four dashboard views:
+## Project Overview
 
-1. **Essential services distribution** — compare counts for nurses, police, and firefighters across provinces and territories, with raw-count and per-100,000 population views.
-2. **Gender employment by NOC category** — compare reported employment for men and women by geography and National Occupational Classification (NOC) category.
-3. **EV factory suitability analysis** — compare selected engineering disciplines across provinces and identify locations that meet a user-selected workforce threshold.
-4. **Engineering talent heatmap** — explore engineering workforce counts by discipline and geography, with an absolute-count or per-capita view.
+The dashboard includes four interactive analyses:
 
-## Technology
+### 1. Essential Services Distribution
+- Explore the distribution of nurses, police officers, and firefighters across provinces and territories.
+- Switch between raw workforce counts and population-normalized comparisons per 100,000 people.
+- Compare workforce distribution across different regions.
 
-- Python
-- Pandas and NumPy
-- Plotly Express and Graph Objects
-- Dash
-- Jupyter Notebook
+### 2. Gender Employment by NOC Category
+- Explore reported employment for men and women across different National Occupational Classification (NOC) major groups.
+- Filter by province or territory and occupational category.
+- Visualize employment distribution and compare the women-to-men employment ratio.
 
-## Repository structure
+### 3. EV Factory Workforce Suitability
+- Compare regional workforce availability across selected engineering disciplines:
+  - Computer engineering
+  - Electrical, electronics and communications engineering
+  - Mechanical engineering
+- Adjust the minimum workforce threshold.
+- Identify regions that meet the selected workforce-size criterion.
+
+This analysis is intended as an initial workforce screening exercise, not a comprehensive assessment of industrial site suitability.
+
+### 4. Engineering Talent Heatmap
+- Explore engineering workforce distribution across provinces and territories.
+- Compare six engineering disciplines.
+- Switch between absolute workforce counts and per-100,000 population views.
+
+## Technologies Used
+
+- **Python** — data processing and application logic
+- **Pandas** — data manipulation and cleaning
+- **NumPy** — numerical operations
+- **Plotly** — interactive data visualizations
+- **Dash** — interactive dashboard development
+- **Jupyter Notebook** — exploratory analysis
+
+## Repository Structure
 
 ```text
 canadian-workforce-analysis-dashboard/
+│
 ├── app.py
+├── assets/
+│   └── style.css
 ├── data/
-│   ├── data_engineering.csv
+│   ├── essential_services.csv
 │   ├── data_gender_employment.csv
-│   └── essential_services.csv
+│   └── data_engineering.csv
 ├── notebooks/
 │   └── canadian_workforce_analysis.ipynb
+├── screenshots/
 ├── requirements.txt
-├── .gitignore
 └── README.md
 ```
 
-## Run locally
+## Running the Dashboard Locally
 
-1. Clone or download this repository.
-2. From the repository root, create and activate a virtual environment (recommended).
-3. Install dependencies:
+1. Clone the repository:
 
-   ```bash
-   python -m pip install -r requirements.txt
-   ```
+```bash
+git clone https://github.com/malika-nagpal/canadian-workforce-analysis-dashboard.git
+```
 
-4. Start the dashboard:
+2. Navigate to the project directory:
 
-   ```bash
-   python app.py
-   ```
+```bash
+cd canadian-workforce-analysis-dashboard
+```
 
-5. Open the local address printed by Dash in your browser (typically `http://127.0.0.1:8050`).
+3. Create and activate a virtual environment:
 
-The notebook version is available in `notebooks/`. The project video is linked from the notebook.
+```bash
+python -m venv venv
+source venv/bin/activate
+```
 
-## Data files and interpretation notes
+4. Install the required dependencies:
 
-The `data/` directory contains the three CSV files supplied with the original project archive. The archive did not include source citations, dataset release dates, or a citation for the population denominators used in the per-capita calculations. Those details should be verified against the original course/project materials and added here before presenting the figures as official or current statistics.
+```bash
+pip install -r requirements.txt
+```
 
-The population values are retained from the original notebook to preserve the original analysis. Per-capita results therefore depend on those embedded population values and should be interpreted accordingly.
+5. Run the dashboard:
 
-## Notes on the prepared version
+```bash
+python app.py
+```
 
-The original analysis and dashboard interactions have been retained. Two packaging/runtime issues were addressed: the population DataFrame is consistently referenced as `df_population`, and the project-video URL is stored as a Markdown link rather than an executable Python code cell. The standalone `app.py` reads the CSVs from the repository's `data/` directory.
+6. Open the local address in your browser:
 
-## Further improvements
+```text
+http://127.0.0.1:8050/
+```
 
-- Add the original data-source citations and population reference year.
-- Add verified dashboard screenshots.
-- Add tests for data cleaning and per-capita calculations.
+## Data and Interpretation Notes
 
-## Author
+The project uses three CSV datasets covering essential services, gender employment, and engineering occupations.
 
-**Malika Nagpal** — Honours Bachelor of Science, Data Science, Wilfrid Laurier University (2026).
+The population denominators used in the per-capita calculations are retained from the original project notebook. The original project archive did not include complete data-source citations, dataset release dates, or a reference year for these population figures.
+
+These values should therefore be independently verified before interpreting the per-capita results as official or current statistics.
+
+## About
+
+**Malika Nagpal**  
+Honours Bachelor of Science in Data Science  
+Wilfrid Laurier University
 
 [LinkedIn](https://www.linkedin.com/in/malika-nagpal/)
+
+[GitHub](https://github.com/malika-nagpal)
