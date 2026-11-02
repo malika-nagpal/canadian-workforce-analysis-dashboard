@@ -107,7 +107,19 @@ The project uses three CSV datasets covering essential services, gender employme
 The population denominators used in the per-capita calculations are retained from the original project notebook. The original project archive did not include complete data-source citations, dataset release dates, or a reference year for these population figures.
 
 These values should therefore be independently verified before interpreting the per-capita results as official or current statistics.
+## Dashboard Preview
 
+### 1. Essential Services Distribution
+![Essential Services](essential_services.png)
+
+### 2. Gender Employment by NOC Category
+![Gender Employment](gender_employment.png)
+
+### 3. EV Factory Suitability Analysis
+![EV Factory Analysis](ev_factory_eligibility_analysis.png)
+
+### 4. Engineering Talent Heatmap
+![Engineering Heatmap](engineering-heatmap.png)
 ## About
 
 **Malika Nagpal**  
